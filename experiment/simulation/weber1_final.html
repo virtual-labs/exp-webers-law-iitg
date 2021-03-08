@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>canvas_experience</title>
+<style type="text/css">
+.button1 {
+    background-color: green;
+    border: none;
+    color: white;
+    <!--padding: 15px 32px;-->
+    text-align: center;
+	width:60px;
+    height:60px;
+	
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 20%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2 {
+    background-color: yellow;
+    border: none;
+    color: white;
+    <!--padding: 15px 32px;-->
+    text-align: center;
+	width:60px;
+    height:60px;
+	
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 20%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+ h2
+ {
+ font-family:verdana;
+ text-decoration:underline;
+ padding:0.3em;
+ color:green;
+ <!--border-bottom:1px solid red;   -->
+ }
+ body
+ {
+  
+  background-color:white;
+ 
+ }
+ 
+</style>
+</head>
+<body>
+<h1 style="color:red; font-family:verdana;"><u>1st Experiment</u></h1>
+<h2 style="color:green;">
+Spot expanding box and double click
+</h1>
+<h4 style='color:purple'>
+Note : It will not work for single click, as it will give <b><u>wrong information</u></b>
+</h4>
+<h4>
+Note : use start only once at a time till you <u>reset</u>.
+</h4>
+<p style="color:green; font-size:15px; font-family:verdana;">
+<span ><u><b>Instructions</b></u></span>
+<br/>
+1.     You will see 6 blue colored rectangular blocks on the screen.<br/>
+
+2.     Your time will start after you press “START” button.<br/>
+
+3.     Observe  all  blocks  minutely  and  identify  the  one  that  expands  in breadth  after  some  time.<br/>
+
+4.     The  moment  you  observe  the  difference  click on the  same  block to  stop the timer.<br/>
+
+5.     Record the time and the % noticed difference or the % area difference.<br/>
+
+6.     Repeat the steps 1-5 and plot the graph between '% area difference' Vs 'number of attempts'.<br/>
+
+7.     To  repeat  the  same  experiment  first  reset  the  timer  by  pressing  “RESET”  button.<br/>
+</p>
+ 
+<div>
+<canvas id='canvas' onclick="stop_func()" style='border: 1px solid; width: 650px; height: 80px; color:red;'>
+    Sorry, your browser does not support the canvas tag.
+  </canvas>
+
+  <script type="text/javascript">
+    //var select=(Math.floor(Math.random()*4))+1;
+    var select;
+	var mouseX;
+	var mouseY;
+	var wide=70;
+	var inc=0;
+	var interval;
+	var allow=0;// addition
+	var count;
+	
+    // Cache a reference to the html element
+    var canvas = document.getElementById('canvas');
+
+    // Set the drawing surface dimensions to match the canvas
+    canvas.width  = canvas.scrollWidth;
+    canvas.height = canvas.scrollHeight;
+
+    // Get a reference to the 2d drawing context / api
+    var ctx = canvas.getContext('2d');
+
+	//give a color to the canvas but in drawing surface:--->
+	ctx.fillStyle='green';
+    // Draw a rectangle (x, y, width, height)
+    
+	function start_func()
+	{
+	if(allow==0)
+	{
+		document.getElementById("output").innerHTML="Started the TIMER";
+		
+		select=(Math.floor(Math.random()*4))+1;
+		
+			wide=70;
+			
+	//----> add here
+	count=0;
+	interval=setInterval(function(){
+	/*if (count>5)
+	{
+	  clearInterval(interval);
+	}*/
+	count++;
+	inc=inc+0.7;
+	
+	if (select==1)
+	{
+	
+	ctx.fillRect(20, 20, wide+inc, 40);
+	}
+	else
+	{
+		ctx.fillRect(20, 20,  wide, 40);
+	}
+	if (select==2)
+	{
+	ctx.fillRect(130, 20, wide+inc, 40);
+	}
+	else
+	{
+	 ctx.fillRect(130, 20,  wide, 40);
+	}
+	if (select==3)
+	{
+	ctx.fillRect(240, 20, wide+inc, 40);
+	}
+	else
+	{
+	  ctx.fillRect(240, 20, wide, 40);
+	}
+	if (select==4){
+	ctx.fillRect(350, 20, wide+inc, 40);
+	}
+	else
+	{
+		ctx.fillRect(350, 20, wide, 40);
+	}
+	
+	//timer.......previouslee..
+	
+	
+	document.getElementById("raju").innerHTML=count+" s ";
+	
+	},1000);
+		
+		}
+	}
+	
+	
+	//some correction needed later...
+	ctx.fillRect(20, 20,  wide, 40);
+	
+	
+	
+	ctx.fillRect(130, 20,  wide, 40);
+	
+	
+	
+	
+	ctx.fillRect(240, 20, wide, 40);
+	
+	
+	ctx.fillRect(350, 20, wide, 40);
+	
+	
+		function reset_func()
+		{
+		document.getElementById("output").innerHTML="Reset_rajdeep";
+		 
+		 select=0;//for selecting rectangular blocks....
+		 
+		 //reloading the page........
+		 
+		 location.reload();
+		 allow=0;
+		}
+		//.......
+		//start of stop_func
+		//.......
+		function stop_func()
+		{
+		//document.getElementById("output").innerHTML="Stop the watch";
+		//to remove the string start_rajdeep 
+		document.getElementById("output").innerHTML=""; 
+		ctx.canvas.addEventListener('click',function(event){
+		var rect = canvas.getBoundingClientRect();
+			mouseX=event.clientX - rect.left ;
+			mouseY=event.clientY - rect.top ;
+			
+			//alert(mouseX+"||"+mouseY);
+		
+		if(20<=mouseY && mouseY<=60)
+		{
+		 if ((20<=mouseX && mouseX<=20+wide+inc)&&(select==1))
+		 {
+		    //document.getElementById("output").innerHTML=mouseX+" | "+mouseY;
+			clearInterval(interval);
+			document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+			
+		 }
+		 else if((130<=mouseX && mouseX<=130+wide+inc) && (select==2))
+		 {
+		    //document.getElementById("output").innerHTML=mouseX+" | "+mouseY;
+			clearInterval(interval);
+			document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+			//document.getElementById("munu").innerHTML=mouseX+" | "+mouseY;
+		 }
+		 else if((240<=mouseX && mouseX<=240+wide+inc) && (select==3) )
+		 {
+		    //document.getElementById("output").innerHTML=mouseX+" | "+mouseY;
+			clearInterval(interval);
+			//document.getElementById("munu").innerHTML=mouseX+" | "+mouseY;
+			document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+		 }
+		 else if((350<=mouseX && mouseX<=350+wide+inc)&& (select==4))
+		 {
+		     //document.getElementById("output").innerHTML=mouseX+" | "+mouseY;
+			 clearInterval(interval);
+			 //document.getElementById("munu").innerHTML=mouseX+" | "+mouseY;
+		 document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+		 }	
+		} 
+		});
+		
+		 
+		 
+		 
+		allow=allow+1;//addition
+		 
+		}//end of stop_func...
+	
+	
+	
+	
+	
+  </script>
+	<br/>
+    <button class="button1" onclick="start_func()">start</button>
+	<button class="button2" onclick="reset_func()">reset</button>
+		<p id="output"></p>
+	<p  id="raju"  style='text-align:center; border: 3px solid; width: 200px; height: 60px; font-family:verdana; font-size:50px; '>TIMER</p>
+	
+	<p id="munu" align='center' style='border:2px dotted; width:300px; height:100px; font-family:verdana; color:green;'>Calculations:</p>
+
+  </div>
+  <!--<iframe src="weber2.html" frameborder="0" height="1600px" width="1300px" scrolling="no"><iframe>-->
+  <h4 align="center" style="font-family:verdana; color:green;">---END OF EXPERIMENT---</h4>
+  
+  
+</body>
+</html>
