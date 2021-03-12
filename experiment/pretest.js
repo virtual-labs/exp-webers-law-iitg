@@ -124,7 +124,7 @@
     buildQuiz();
 
      // on submit, show results
-   //  submitButton.addEventListener("click", showResults);
+   submitButton.addEventListener("click", showResults);
  })();
 
 
