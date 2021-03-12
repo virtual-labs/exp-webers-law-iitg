@@ -1,1 +1,1 @@
-## Experiment name
+## Weber's Law
