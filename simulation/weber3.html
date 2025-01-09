@@ -1,0 +1,443 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+<title>3rd Weber's law program</title>
+
+<style>
+.button1 {
+    background-color: green;
+    border: none;
+    color: white;
+    <!--padding: 15px 32px;-->
+    text-align: center;
+	width:60px;
+    height:60px;
+	
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 20%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button2{
+    background-color: rgb(255, 0, 0);
+    border: none;
+    color: white;
+    <!--padding: 15px 32px;-->
+    text-align: center;
+	width:60px;
+    height:60px;
+	
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 20%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+ h1
+ {
+ font-family:verdana;
+ text-decoration:underline;
+ padding:0.3em;
+ color:red;
+ }
+h2
+ {
+ font-family:verdana;
+ text-decoration:underline;
+ //padding:0.8em;
+ color:green;
+ <!--border-bottom:1px solid red;   -->
+ }
+</style>
+
+</head>
+
+</body>
+<h1><u>3rd Experiment</u></h1>
+<h2 >
+Spot color changing color and double click
+</h2>
+<h4  style='color:purple'>Note : It will not work for single click, as it will give <b><u>wrong information</u></b></h4>
+<p style="color:green; font-size:15px; font-family:verdana;">
+<span ><u><b>Instructions</b></u></span>
+<br/>
+1.     You will see 6 gray colored circles.<br/>
+
+2.     Your time will start after you press “START” button.<br/>
+
+3.     Observe  all  circles  minutely  and  identify  the  one  that  changes color  after  some  time.<br/>
+
+4.     The  moment  you  observe  the  difference  click on the  same  circle to  stop the timer.<br/>
+
+5.     Record the time and the % noticed difference or the % color difference.<br/>
+
+6.     Repeat the step 1-5 and plot the graph between '% color difference' Vs 'number of attempts'.<br/>
+
+7.     To  repeat  the  same  experiment  first  reset  the  timer  by  pressing  “RESET”  button.<br/>
+
+ </p>
+
+<div>
+
+<canvas id='canvas' onclick="stop_func()" style='border: 1px solid; width: 650px; height: 300px; color:red;'>
+    Sorry, your browser does not support the canvas tag.
+  </canvas>
+<script type="text/javascript">
+
+ var selecti;
+	var mouseX;
+	var mouseY;
+	var wide=70;
+	var inc=0;
+	var interval;
+	var allow=0;// addition
+	var count;
+	var xo;
+	var yo;
+	var dist;
+	var dx;
+	var dy;
+	var dec=0.1;
+	var radi=25;
+	
+    // Cache a reference to the html element
+    var canvas = document.getElementById('canvas');
+
+    // Set the drawing surface dimensions to match the canvas
+    canvas.width  = canvas.scrollWidth;
+    canvas.height = canvas.scrollHeight;
+
+    // Get a reference to the 2d drawing context / api
+    var ctx = canvas.getContext('2d');
+	
+	//will be used in 3rd weber's law program...>>
+	//give a color to the canvas but in drawing surface:--->
+	//ctx.fillStyle="rgba(0,0,200,"+dec+")";
+    //for circle.....
+    ctx.beginPath();
+	
+	//dec=0.1;
+	ctx.fillStyle="rgba(0,0,255,"+dec+")";
+	ctx.arc(50, 100, 25, 0, 2 * Math.PI,false);
+	//ctx.fill();
+	
+	//dec=0.1;
+	//ctx.fillRect(130, 20,  wide, 40);
+	ctx.fillStyle="rgba(0,0,255,"+dec+")";
+	ctx.arc(150, 100, 25, 0, 2 * Math.PI,false);
+	//ctx.fill();
+	
+	//dec=0.1;
+	//ctx.fillRect(240, 20, wide, 40);
+	ctx.fillStyle="rgba(0,0,255,"+dec+")";
+	ctx.arc(250, 100, 25, 0, 2 * Math.PI,false);
+	//ctx.fill();
+	
+	//dec=0.1;
+	ctx.fillStyle="rgba(0,0,255,"+dec+")";
+	ctx.arc(350, 100, 25, 0, 2 * Math.PI,false);
+	ctx.fill();
+	
+    
+	function start_func()
+	{
+	if(allow==0)
+	{
+		document.getElementById("output").innerHTML="Started the TIMER";
+		
+		selecti=(Math.floor(Math.random()*4))+1;
+		
+			//wide=70;
+			
+	//----> add here
+	count=0;
+	if(allow==0){
+	interval=setInterval(function(){
+	/*if (count>5)
+	{
+	  clearInterval(interval);
+	}*/
+	count++;
+	//inc=inc+0.1;
+	/*if(dec%10==0)
+	{
+	 
+	}*/
+	if (selecti==1)
+	{
+		//FakeLoad();
+		xo=50;
+		yo=100;
+		ctx.beginPath();
+		//radi=25+inc;
+		
+		//update();
+		//ctx.fillstyle="white";
+		//dec=dec+0.000000000001;
+		
+		//Regarding color do not change the concept....>>>>
+		ctx.fillStyle="rgba(0,0,255,"+0.01+")";
+		ctx.arc(xo, yo, radi, 0, 2 * Math.PI,false);
+		ctx.fill();
+	//ctx.fillRect(20, 20, wide+inc, 40);
+	}
+	
+	if (selecti==2)
+	{
+		//FakeLoad();
+		xo=150;
+		yo=100;
+		//radi=25+inc;
+		ctx.beginPath();
+		//update();
+		//ctx.fillstyle="white";
+		ctx.fillStyle="rgba(0,0,200,"+0.01+")";
+		ctx.arc(xo, yo, radi, 0, 2 * Math.PI,false);
+		ctx.fill();
+	//ctx.fillRect(130, 20, wide+inc, 40);
+	}
+	
+	if (selecti==3)
+	{
+		//FakeLoad();
+		xo=250;
+		yo=100;
+		//radi=25+inc;
+		ctx.beginPath();
+		//ctx.fillstyle="white";
+		//ctx.fillStyle="rgba(0,0,200,"+dec+")";
+		//update();
+		ctx.fillStyle="rgba(0,0,200,"+0.01+")";
+		ctx.arc(xo, yo, radi, 0, 2 * Math.PI,false);
+		ctx.fill();
+	//ctx.fillRect(240, 20, wide+inc, 40);
+	}
+	
+	if (selecti==4)
+	{
+		//FakeLoad();
+		xo=350;
+		yo=100;
+		//radi=25+inc;
+		ctx.beginPath();
+		//ctx.fillstyle="white";
+		//ctx.fillStyle="rgba(0,0,200,"+dec+")";
+		//update();
+		ctx.fillStyle="rgba(0,0,200,"+0.01+")";
+		ctx.arc(xo, yo, radi, 0, 2 * Math.PI,false);
+		ctx.fill();
+	//ctx.fillRect(350, 20, wide+inc, 40);
+	}
+	
+	
+	//timer.......previouslee..
+	
+	
+	document.getElementById("raju").innerHTML=count+" s ";
+	
+	},1000);
+		
+		}
+		}
+	}
+	
+	
+	//some correction needed later...
+	//ctx.fillRect(20, 20,  wide, 40);
+	
+	
+	
+	
+	
+		function reset_func()
+		{
+		document.getElementById("output").innerHTML="Reset_rajdeep";
+		 
+		  selecti=0;//for selecting rectangular blocks....
+		 
+		 //reloading the page........
+		 
+		 location.reload(true);
+		 allow=0;
+		}
+		//.......
+		//start of stop_func
+		//.......
+		function stop_func()
+		{
+		//document.getElementById("output").innerHTML="Stop the watch";
+		//to remove the string start_rajdeep 
+		document.getElementById("output").innerHTML=""; 
+		ctx.canvas.addEventListener("click",function(event){
+			var rect = canvas.getBoundingClientRect();
+			mouseX=event.clientX-rect.left ;
+			mouseY=event.clientY-rect.top ;
+			//alert("clicked");
+		
+		
+		//document.getElementById("munu").innerHTML=mouseX;
+		
+		if(selecti==1)//just for checking purpose i am keeping that....
+		{
+			dx=mouseX-xo;
+			dy=mouseY-yo;
+		 
+		 dist=Math.sqrt((dx*dx)+(dy*dy));
+		 //alert(mouseX+"  "+mouseY);
+		 //alert("xo="+xo+"yo="+yo);
+		 //alert("radius="+radi);
+		 //alert(dx+" || "+dy);
+		 
+		 //alert(dist);
+		 //alert(dx+" "+dy);
+		 
+		 //dist=Math.sqrt((dx*dx)+(dy*dy));
+		 
+		 //alert(dist+" || "+radi);
+		 
+		 if(dist<radi)
+		 {
+			 alert("Success!!");
+			 //document.write("success");
+			// alert("A=34t+5600 :: A="+((34*count)+5600)+"..A..diff..%="+((17/28)*count).toFixed(2));
+			 //document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+			 clearInterval(interval);
+			 
+			 document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+
+		 }
+		 else
+		 {
+			 alert("Wrong!!");
+		 }
+		}
+		else if(selecti==2)
+		{
+			
+			dx=mouseX-xo;
+			dy=mouseY-yo;
+			
+			dist=Math.sqrt((dx*dx)+(dy*dy));
+			/*alert(mouseX+"  "+mouseY);
+		 alert("xo="+xo+"yo="+yo);
+			alert("radius="+radi);
+			
+			alert(dx+" || "+dy);*/
+			
+			if(dist<radi)
+		 {
+			 alert("Success!!");
+			 
+			 //alert("A=34t+5600 :: A="+((34*count)+5600)+"..A..diff..%="+((17/28)*count).toFixed(2));
+			 
+			 //document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+			 clearInterval(interval);
+			document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+		 
+		 }
+		 else
+		 {
+			 alert("Wrong!!");
+		 }
+		}
+		
+		else if(selecti==3)
+		{
+			
+			dx=mouseX-xo;
+			dy=mouseY-yo;
+			
+			dist=Math.sqrt((dx*dx)+(dy*dy));
+			/*alert(mouseX+"  "+mouseY);
+		 alert("xo="+xo+"yo="+yo);
+			alert("radius="+radi);
+			
+			alert(dx+" || "+dy);
+			*/
+			
+			if(dist<radi)
+		 {
+			 alert("Success!!");
+			 
+			 //document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+			 //alert("A=34t+5600 :: A="+((34*count)+5600)+"..A..diff..%="+((17/28)*count).toFixed(2));
+			 clearInterval(interval);
+			 
+			document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+		 }
+		 else
+		 {
+			 alert("Wrong!!");
+		 }
+		}
+		
+		else if(selecti==4)
+		{
+		   
+			dx=mouseX-xo;
+			dy=mouseY-yo;
+			
+			dist=Math.sqrt((dx*dx)+(dy*dy));
+			/*alert(mouseX+"  "+mouseY);
+		 alert("xo="+xo+"yo="+yo);
+			alert("radius="+radi);
+			
+			alert(dx+" || "+dy);
+			
+			*/
+			if(dist<radi)
+		 {
+			 alert("Success!!");
+			 
+			 //document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+			 
+			// alert("A=34t+5600 :: A="+((34*count)+5600)+"..A..diff..%="+((17/28)*count).toFixed(2));
+			 
+			 clearInterval(interval);
+			 
+			 document.getElementById("munu").innerHTML="A=34t+5600"+"<br/>"+"A="+((34*count)+5600)+"<br/>"+"..A..diff..%="+((17/28)*count).toFixed(2);
+		 }
+		 else
+		 {
+			 alert("Wrong!!");
+		 }
+		 
+		 
+		}
+		
+		});
+		
+		 
+		 
+		 
+		allow=allow+1;//addition
+		 
+		}//end of stop_func...
+	
+	
+	
+	
+	
+
+</script>
+
+</div>
+
+<br/>
+    <button class="button1" onclick="start_func()">start</button>
+	<br/>
+	<button class="button2" onclick="reset_func()">reset</button>
+	<p id="output"></p>
+<p  id="raju" align='center' style='border: 3px solid; width: 200px; height: 60px; font-family:verdana; font-size:50px; '>TIMER</p>
+<p id="munu" align='center' style='border:2px dotted; width:300px; height:100px; font-family:verdana; color:green;'>Calculations:</p>
+<h4 align="center" style="font-family:verdana; color:green;">---END OF EXPERIMENT---</h4>
+</body>
+
+</html>

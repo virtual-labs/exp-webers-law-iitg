@@ -1,0 +1,131 @@
+
+/home/runner/work/exp-webers-law-iitg/exp-webers-law-iitg/experiment/posttest.js
+  18:18  warning  'letter' is not defined  no-undef
+  22:73  warning  'letter' is not defined  no-undef
+  23:13  warning  'letter' is not defined  no-undef
+  24:37  warning  'letter' is not defined  no-undef
+
+/home/runner/work/exp-webers-law-iitg/exp-webers-law-iitg/experiment/pretest.js
+  18:19  warning  'letter' is not defined  no-undef
+  22:74  warning  'letter' is not defined  no-undef
+  23:14  warning  'letter' is not defined  no-undef
+  24:38  warning  'letter' is not defined  no-undef
+
+/home/runner/work/exp-webers-law-iitg/exp-webers-law-iitg/experiment/simulation/weber2.js
+    5:6   warning  'wide' is assigned a value but never used  no-unused-vars
+   34:11  warning  'start_func' is defined but never used     no-unused-vars
+  135:12  warning  'reset_func' is defined but never used     no-unused-vars
+  138:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  139:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  140:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  141:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  142:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  143:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  144:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  145:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  150:12  warning  'stop_func' is defined but never used      no-unused-vars
+  166:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  167:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  168:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  169:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  170:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  171:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  172:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  173:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  174:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  175:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  176:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  177:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  178:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  179:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  180:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  181:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  182:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  183:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  184:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  185:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  186:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  187:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  188:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  189:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  190:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  191:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  192:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  193:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  196:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  197:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  198:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  199:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  200:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  201:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  202:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  203:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  204:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  220:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  221:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  222:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  223:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  224:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  225:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  226:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  227:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  228:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  229:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  230:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  231:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  233:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  234:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  235:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  236:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  237:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  238:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  239:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  240:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  241:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  242:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  260:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  261:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  262:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  263:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  264:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  265:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  266:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  267:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  268:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  269:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  270:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  271:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  273:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  274:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  275:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  276:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  281:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  286:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  299:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  300:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  301:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  302:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  303:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  304:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  305:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  306:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  307:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  308:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  309:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  310:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  312:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  313:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  314:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  315:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  316:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  317:3   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  318:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  319:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  320:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  325:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  326:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  327:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+  330:2   warning  Mixed spaces and tabs                      no-mixed-spaces-and-tabs
+
+✖ 122 problems (0 errors, 122 warnings)
+
